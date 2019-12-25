@@ -1,14 +1,8 @@
 # Overview
-
-empty code repository
-
+[![Build Status](https://travis-ci.com/dongzhuoer/docker-rlang.svg?branch=master)](https://travis-ci.com/dongzhuoer/docker-rlang)
 
 
-# How to use
 
-1. create repo on GitHub using me as template, clone to local
-1. replace description in `readme.md`
-1. delete this section
 
 
 

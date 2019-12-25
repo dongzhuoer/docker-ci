@@ -9,13 +9,15 @@
     "tasks": [
         {
             "label": "build",
-            "command": "echo build",
+            "command": "docker build -t ci -f ${relativeFile} .",
             "group": {
                 "kind": "build",
-                "isDefault": true,
+                "isDefault": true
             },
+            "problemMatcher": [],
         },
         {
+            // sed 's/Dockerfile//'
             "label": "test",
             "command": "echo test",
             "group": {

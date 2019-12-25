@@ -1,0 +1,13 @@
+dist: bionic
+language: minimal
+notifications:
+  email: false
+
+jobs:  
+  include:
+    - stage: build
+      name: base
+      script: bash script.sh base  
+    - stage: test
+      name: base
+      script: skip
