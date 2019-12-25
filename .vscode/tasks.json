@@ -9,7 +9,7 @@
     "tasks": [
         {
             "label": "build",
-            "command": "docker build -t ci -f ${relativeFile} .",
+            "command": "docker build -t dongzhuoer/ci:`echo ${relativeFile} | sed 's/.Dockerfile//'` -f ${relativeFile} .",
             "group": {
                 "kind": "build",
                 "isDefault": true
@@ -17,9 +17,8 @@
             "problemMatcher": [],
         },
         {
-            // sed 's/Dockerfile//'
             "label": "test",
-            "command": "echo test",
+            "command": "bash -x test-`echo ${relativeFile} | sed 's/.Dockerfile//'`.sh",
             "group": {
                 "kind": "test",
                 "isDefault": true,
@@ -27,7 +26,7 @@
         },
         {
             "label": "view GitHub",
-            "command": "google-chrome https://github.com/dongzhuoer/${workspaceFolderBasename} 2> /dev/null",
+            "command": "google-chrome https://github.com/dongzhuoer/docker-ci 2> /dev/null",
         },
     ]
 }

@@ -7,7 +7,7 @@ jobs:
   include:
     - stage: build
       name: base
-      script: bash +x script.sh base  
+      script: bash +x build.sh base  
     - stage: test
       name: base
-      script: skip
+      script: bash +x test-base.sh
