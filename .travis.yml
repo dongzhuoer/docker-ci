@@ -1,11 +1,8 @@
 dist: bionic
 language: minimal
-notifications:
-  email: false
 script: 
   - docker build -t dongzhuoer/ci:$tag -f $tag.Dockerfile .
   - bash +x deploy.sh
-
 jobs:  
   include:
     - stage: build
