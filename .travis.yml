@@ -6,12 +6,8 @@ script:
 jobs:  
   include:
     - stage: build
-      name: place holder  
-      script: skip  # without this toy job, comment first book would cuase error      
-    - name: base
+      name: base
       env: tag=base
     - stage: test
-      name: place holder  
-      script: skip  # without this toy job, comment first book would cuase error      
-    - name: base
+      name: base
       script: bash +x test-base.sh
